@@ -6,9 +6,7 @@ const Layout = () => {
   return (
     <UserProvider>
       <QueryProvider>
-        <Stack>
-          <Stack.Screen name="details" options={{}} />
-        </Stack>
+        <Stack></Stack>
       </QueryProvider>
     </UserProvider>
   );

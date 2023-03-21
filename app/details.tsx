@@ -8,8 +8,6 @@ const Details = () => {
     <View>
       <Text>Details page</Text>
       <Text onPress={() => router.back()}>Go back!</Text>
-      <Stack.Screen options={{ title: "Details" }} />
-      {/* <Link href="/">Go to Home</Link> */}
     </View>
   );
 };

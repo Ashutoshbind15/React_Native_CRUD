@@ -1,12 +1,11 @@
 import { Link, Stack } from "expo-router";
 import { View, Text, Button } from "react-native";
-import { useContext } from "react";
-import { UserCtx } from "../context/UserProvider";
 import { signOut } from "firebase/auth";
 import { FIREBASE_AUTH } from "../firebaseConfig";
+import { useUser } from "../hooks/utils";
 
 const Home = () => {
-  const user = useContext(UserCtx);
+  const user = useUser();
 
   const handler = async () => {
     try {
@@ -24,6 +23,7 @@ const Home = () => {
       <Link href="/details">Go to Details</Link>
       <Link href="/list">Go to List</Link>
       <Link href="/signin">SignIn</Link>
+      <Link href="/protected">Admin Screen</Link>
 
       {user ? <Button onPress={handler} title={"Signout"} /> : null}
     </View>
